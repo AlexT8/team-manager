@@ -1,0 +1,20 @@
+.title{
+    position:relative;
+    width:100%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5em;
+    margin-bottom:1rem
+}
+.title__button{
+    margin:.2rem;
+    position: absolute;
+    left:1rem;
+    font-size:1.2em
+}
+.title__text{
+    border-bottom:1px solid black;
+    padding:.5rem
+}

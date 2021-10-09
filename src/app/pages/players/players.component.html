@@ -1,0 +1,26 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<main *ngIf="!loading">
+    <app-title section='Jugadores'></app-title>
+
+    <mat-list *ngIf="!loading">
+        <div *ngFor="let player of players">
+            <mat-list-item class="player" mat-ripple>
+                <div class="player__img">
+                    <img src="{{player.Avatar}}" alt="Imágen del jugador">
+                </div>
+                <span class="player__name">{{player['Nombre del Jugador']}}</span>
+                <section class="player__options">
+                    <button class="btn btn__del">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="btn btn__edit">
+                        <i class="fas fa-user-edit"></i>
+                    </button>
+                </section>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+    </mat-list>
+    <app-new (new)="newPlayer()"></app-new>
+</main>

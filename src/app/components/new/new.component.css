@@ -1,0 +1,18 @@
+.new{
+    position:fixed;
+    bottom:1rem;
+    right:1rem;
+    padding:.5rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--success);
+    border-radius:50px;
+    font-size: 1.8em;
+    box-shadow:2px 4px 8px black;
+    transition:.2s ease;
+}
+.new:active{
+    box-shadow:0px 0px 8px black;
+    transform: scale(.95);
+}

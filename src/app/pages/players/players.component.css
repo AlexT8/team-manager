@@ -1,0 +1,14 @@
+.player__img{
+    width:15%
+}
+.player__img img{
+    width:100%
+}
+.player__options{
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:1rem
+}

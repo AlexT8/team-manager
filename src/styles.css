@@ -1,0 +1,29 @@
+*{ margin: 0;padding: 0;}
+:root{
+    --main:#508AA8;
+    --secondary:#9DD1F1;
+    --text:#EEF5FC;
+    --del:#EA2B1F;
+    --success:#3BB273;
+    --warn:#E1BC29;
+}
+.container{
+    padding:.5rem
+}
+.btn{
+    width:40%;
+    border:none;outline:none;
+    padding:.4rem;
+    margin:.2rem;
+    border-radius:5px;
+    font-size:.8em;
+}
+.btn__del{
+    background:var(--del)
+}
+.btn__edit{
+    background:var(--warn)
+}
+.btn__success{
+    background:var(--success)
+}
