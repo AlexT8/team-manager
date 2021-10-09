@@ -13,6 +13,7 @@ import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { TitleComponent } from './components/title/title.component';
 import { NewComponent } from './components/new/new.component';
+import { TeamComponent } from './pages/team/team.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewComponent } from './components/new/new.component';
     LeaguesComponent,
     LoaderComponent,
     TitleComponent,
-    NewComponent
+    NewComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

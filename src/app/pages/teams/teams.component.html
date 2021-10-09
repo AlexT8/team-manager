@@ -1,1 +1,26 @@
-<p>teams works!</p>
+<app-loader *ngIf="loading"></app-loader>
+
+<main *ngIf="!loading">
+    <app-title section='Equipos'></app-title>
+
+    <mat-list *ngIf="!loading">
+        <div *ngFor="let team of teams" (click)="viewTeam(team.id)">
+            <mat-list-item class="team" mat-ripple>
+                <div class="team__img">
+                    <img src="{{team['Logo del Equipo']}}" alt="Imágen del equipo">
+                </div>
+                <span class="team__name">{{team['Nombre del equipo']}}</span>
+                <section class="team__options">
+                    <button class="btn btn__del">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="btn btn__edit">
+                        <i class="fas fa-user-edit"></i>
+                    </button>
+                </section>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+    </mat-list>
+    <app-new (new)="newTeam()"></app-new>
+</main>

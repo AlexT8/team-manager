@@ -1,0 +1,15 @@
+.team__image{
+    width: 100%
+}
+.players__img{
+    width:15%
+}
+.players__img img{
+    width:100%
+}
+
+h2{
+    width:50%;
+    text-align:center;
+    margin: auto
+}

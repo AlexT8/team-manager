@@ -7,6 +7,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRippleModule} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatDividerModule,
     MatListModule,
     MatProgressSpinnerModule,
-    MatRippleModule
+    MatRippleModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }

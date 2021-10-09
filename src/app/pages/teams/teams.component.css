@@ -1,0 +1,14 @@
+.team__img{
+    width:15%
+}
+.team__img img{
+    width:100%
+}
+.team__options{
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:1rem
+}

@@ -1,0 +1,19 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<main *ngIf="!loading">
+    <app-title section="Equipo: {{team['Nombre del equipo']}}"></app-title>
+    <img mat-card-image src="{{team['Logo del Equipo']}}" class="team__image"/>
+
+    <h2>Miembros</h2>
+    <mat-list *ngIf="!loading">
+        <div *ngFor="let player of teamPlayers">
+            <mat-list-item class="team__players" mat-ripple>
+                <div class="players__img">
+                    <img src="{{player.Avatar}}" alt="Imágen del jugador">
+                </div>
+                <span class="players__name">{{player['Nombre del Jugador']}}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+    </mat-list>
+</main>
