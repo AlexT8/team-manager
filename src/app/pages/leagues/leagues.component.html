@@ -1,1 +1,17 @@
-<p>leagues works!</p>
+<app-loader *ngIf="loading"></app-loader>
+
+<main *ngIf="!loading">
+    <app-title section="Ligas"></app-title>
+
+    <mat-list *ngIf="!loading">
+        <div *ngFor="let league of leagues" (click)="viewLeague(league.Identificador)">
+            <mat-list-item class="league" mat-ripple>
+                <div class="league__img">
+                    <img src="{{league['Logo de la Liga']}}" alt="Imágen de la liga">
+                </div>
+                <span class="league__name">{{league['Nombre De La Liga']}}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+    </mat-list>
+</main>

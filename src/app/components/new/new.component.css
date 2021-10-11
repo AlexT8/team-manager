@@ -11,6 +11,7 @@
     font-size: 1.8em;
     box-shadow:2px 4px 8px black;
     transition:.2s ease;
+    z-index:999
 }
 .new:active{
     box-shadow:0px 0px 8px black;

@@ -13,4 +13,7 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goto(section){
+    this.service.navigate(section)
+  }
 }

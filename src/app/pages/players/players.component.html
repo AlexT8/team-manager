@@ -6,12 +6,14 @@
     <mat-list *ngIf="!loading">
         <div *ngFor="let player of players">
             <mat-list-item class="player" mat-ripple>
-                <div class="player__img">
-                    <img src="{{player.Avatar}}" alt="Imágen del jugador">
+                <div class="player__data" (click)="viewPlayer(player.id)">
+                    <div class="player__img">
+                        <img src="{{player.Avatar}}" alt="Imágen del jugador">
+                    </div>
+                    <span class="player__name">{{player['Nombre del Jugador']}}</span>
                 </div>
-                <span class="player__name">{{player['Nombre del Jugador']}}</span>
                 <section class="player__options">
-                    <button class="btn btn__del">
+                    <button class="btn btn__del" (click)="delPlayer(player)">
                         <i class="fas fa-times"></i>
                     </button>
                     <button class="btn btn__edit">
@@ -22,5 +24,5 @@
             <mat-divider></mat-divider>
         </div>
     </mat-list>
-    <app-new (new)="newPlayer()"></app-new>
+    <app-new-button (new)="newPlayer()"></app-new-button>
 </main>

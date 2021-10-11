@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../../services/main.service';
 import {PlayerModel} from '../../models/Players'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-players',
@@ -14,7 +15,6 @@ export class PlayersComponent implements OnInit {
 
   constructor(private service:MainService) {
     this.service.getSection('players').subscribe((data:any)=>{
-      console.log(data)
       this.players = data;
       this.loading = false
     })
@@ -24,7 +24,20 @@ export class PlayersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  viewPlayer(id){
+    this.service.navigate(`/player/${id}`)
+  }
   newPlayer(){
-    console.log('new')
+    this.service.navigate(`/new/player`)
+  }
+
+  delPlayer(player){
+    this.service.delPlayer(player.id).subscribe(data =>{
+      this.players.splice(this.players.indexOf(player), 1)
+      Swal.fire({
+        icon:'success',
+        text:'Jugador eliminado exitosamente'
+      })
+    })
   }
 }

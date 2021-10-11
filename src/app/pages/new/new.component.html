@@ -1,0 +1,60 @@
+<main>
+
+    <app-title section="Agregar datos"></app-title>
+    <section *ngIf="!section" class="election">
+        <h2>Elija que quiere agregar</h2>
+        <div class="election__options">
+            <button class="btn btn__success" (click)="selectSection('team')">
+                Agregar un equipo
+            </button>
+            <button class="btn btn__success" (click)="selectSection('player')">
+                Agregar un jugador
+            </button>
+        </div>
+    </section>
+
+    <section *ngIf="section == 'team'">
+        <mat-form-field  appearance="fill">
+            <mat-label>Nombre del equipo</mat-label>
+            <input matInput type="text" [(ngModel)]="team['Nombre del equipo']">
+        </mat-form-field>
+        <h3>Elija la liga del equipo</h3>
+        <mat-list>
+            <div *ngFor="let league of leagues" (click)="team.Liga = league.Identificador">
+                <mat-list-item class="list" mat-ripple [ngClass]="{'selected':team.Liga == league.Identificador}">
+                    <div class="list__img">
+                        <img src="{{league['Logo de la Liga']}}" alt="Imágen de la liga">
+                    </div>
+                    <span class="list__name">{{league['Nombre De La Liga']}}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+        <button class="btn btn__success" (click)="new()">
+            Agregar equipo
+        </button>
+    </section>
+    <section *ngIf="section == 'player'">
+        <mat-form-field  appearance="fill">
+            <mat-label>Nombre del jugador</mat-label>
+            <input matInput type="text" [(ngModel)]="player['Nombre del Jugador']">
+        </mat-form-field>
+
+        <h3>Elija el equipo del jugador</h3>
+        <mat-list>
+
+            <div *ngFor="let team of teams" (click)="player.teamId = team.id">
+                <mat-list-item class="list" mat-ripple [ngClass]="{'selected':player.teamId == team.id}">
+                    <div class="list__img">
+                        <img src="{{team['Logo del Equipo']}}" alt="Imágen del equipo">
+                    </div>
+                    <span class="list__name">{{team['Nombre del equipo']}}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+        <button class="btn btn__success" (click)="new()">
+            Agregar jugador
+        </button>
+    </section>
+</main>

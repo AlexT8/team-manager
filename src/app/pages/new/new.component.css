@@ -1,0 +1,35 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    min-height:70vh;
+}
+
+.election__options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__img{
+    width:15%
+}
+.list__img img{
+    width:100%
+}
+.list__options{
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:1rem
+}
+
+.selected{
+    background:var(--success);
+    transition:all.4s ease;
+    color:var(--text)
+}

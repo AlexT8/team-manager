@@ -1,0 +1,14 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:90vh
+}
+main .btn{
+    font-size:1.2em;
+    width:55%;
+    margin:1rem 0;
+    background-color:var(--main);
+    color:var(--text)
+}

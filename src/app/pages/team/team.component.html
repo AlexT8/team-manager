@@ -4,7 +4,7 @@
     <app-title section="Equipo: {{team['Nombre del equipo']}}"></app-title>
     <img mat-card-image src="{{team['Logo del Equipo']}}" class="team__image"/>
 
-    <h2>Miembros</h2>
+    <h2>Jugadores del equipo {{team['Nombre del equipo']}}</h2>
     <mat-list *ngIf="!loading">
         <div *ngFor="let player of teamPlayers">
             <mat-list-item class="team__players" mat-ripple>
