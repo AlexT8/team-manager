@@ -25,7 +25,7 @@ export class PlayersComponent implements OnInit {
   }
 
   viewPlayer(id){
-    this.service.navigate(`/player/${id}`)
+    this.service.navigate(`/players/${id}`)
   }
   newPlayer(){
     this.service.navigate(`/new/player`)

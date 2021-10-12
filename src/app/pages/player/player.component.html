@@ -1,1 +1,7 @@
-<p>player works!</p>
+<app-loader *ngIf="loading"></app-loader>
+
+<main *ngIf="!loading">
+    <app-title section="Jugador: {{player['Nombre del Jugador']}}"></app-title>
+    <img mat-card-image src="{{player.Avatar}}" class="player__image"/>
+
+</main>
