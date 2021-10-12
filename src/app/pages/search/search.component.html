@@ -1,1 +1,42 @@
-<p>search works!</p>
+<app-title section="Buscar jugadores"></app-title>
+<main>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre o equipo del jugador</mat-label>
+        <input type="email" matInput (keyup)="search(value.value)" #value
+               placeholder="Ex. Geba o Ethe Turner">
+      </mat-form-field>
+
+      <section *ngIf="playersSearched.length>0">
+          <h2>Jugadores</h2>
+          <mat-list>
+              <div *ngFor="let player of playersSearched">
+                  <mat-list-item class="item" mat-ripple>
+                      <div class="item__data" (click)="view('player', player.id)">
+                          <div class="item__img">
+                              <img src="{{player.Avatar}}" alt="Imágen del jugador">
+                            </div>
+                            <span class="item__name">{{player['Nombre del Jugador']}}</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-list>
+        </section>
+
+        <section *ngIf="teamsSearched.length>0">
+            <h2>Equipos</h2>
+            <mat-list>
+                <div *ngFor="let team of teamsSearched">
+                    <mat-list-item class="item">
+                        <div (click)="view('team', team.id)" class="item__data">
+                            <div class="item__img">
+                                <img src="{{team['Logo del Equipo']}}" alt="Imágen del equipo">
+                            </div>
+                            <span class="item__name">{{team['Nombre del equipo']}}</span>
+                        </div>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-list>
+        </section>
+</main>

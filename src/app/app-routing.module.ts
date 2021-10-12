@@ -8,6 +8,7 @@ import { TeamComponent } from './pages/team/team.component';
 import { LeagueComponent } from './pages/league/league.component';
 import { PlayerComponent } from './pages/player/player.component';
 import { NewPageComponent } from './pages/new/new.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {path:'', component:IndexComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'leagues/:id', component:LeagueComponent},
   {path:'new', component:NewPageComponent},
   {path:'new/:section', component:NewPageComponent},
+  {path:'search', component:SearchComponent},
   {path:'**', redirectTo:'/', pathMatch:'full'}
 ];
 
