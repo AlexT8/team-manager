@@ -19,6 +19,7 @@ import { LeagueComponent } from './pages/league/league.component';
 import { PlayerComponent } from './pages/player/player.component';
 import { NewPageComponent } from './pages/new/new.component';
 import { SearchComponent } from './pages/search/search.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { SearchComponent } from './pages/search/search.component';
     LeagueComponent,
     PlayerComponent,
     NewPageComponent,
-    SearchComponent
+    SearchComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

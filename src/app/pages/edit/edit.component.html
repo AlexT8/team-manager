@@ -1,0 +1,19 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<app-title section="Editar {{section=='teams'?'equipo':'jugador'}}"></app-title>
+<main *ngIf="!loading">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Editar nombre del {{section=='teams'?'equipo':'jugador'}}</mat-label>
+
+        <input type="text" matInput placeholder="Ex. Squaads"
+        [(ngModel)]="data['Nombre del equipo']" *ngIf="section=='teams'"/>
+        <input type="text" matInput placeholder="Ex. Squaads" 
+        [(ngModel)]="data['Nombre del Jugador']" *ngIf="section=='players'"/>
+
+      </mat-form-field>
+
+      <button class="btn" (click)="edit()">
+          Editar
+      </button>
+</main>

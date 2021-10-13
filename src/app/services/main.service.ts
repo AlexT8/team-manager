@@ -42,4 +42,9 @@ export class MainService {
   delPlayer(id){
     return this.http.delete(this.link(`players/${id}`))
   }
+
+  //edit player or team depending parameters
+  editData(section, data){
+    return this.http.patch(`${this.link(section)}/${data.id}`, data)
+  }
 }

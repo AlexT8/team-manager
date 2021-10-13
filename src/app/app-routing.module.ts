@@ -9,6 +9,7 @@ import { LeagueComponent } from './pages/league/league.component';
 import { PlayerComponent } from './pages/player/player.component';
 import { NewPageComponent } from './pages/new/new.component';
 import { SearchComponent } from './pages/search/search.component';
+import { EditComponent } from './pages/edit/edit.component';
 
 const routes: Routes = [
   {path:'', component:IndexComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'new', component:NewPageComponent},
   {path:'new/:section', component:NewPageComponent},
   {path:'search', component:SearchComponent},
+  {path:'edit/:section/:id', component:EditComponent},
   {path:'**', redirectTo:'/', pathMatch:'full'}
 ];
 
